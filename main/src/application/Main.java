@@ -12,12 +12,13 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			BorderPane root = new BorderPane();
-			Scene scene = new Scene(root,1280,720,Color.RED); 
+			Scene homeScreen = new Scene(root,1280,720,Color.RED); 
 			primaryStage.setTitle("AL Ahly SC");// title of the application
+			// set global css sheet 
+			String CSS = this.getClass().getResource("application.css").toExternalForm();
+			homeScreen.getStylesheets().add(CSS);
 			
-			
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
+			primaryStage.setScene(homeScreen);
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
