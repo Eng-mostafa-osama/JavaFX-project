@@ -6,16 +6,19 @@ import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 
 
 public class Main extends Application {
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("/home_page.fxml"));
 			Scene homeScreen = new Scene(root); 
+			primaryStage.setResizable(false);
 			primaryStage.setTitle("AL Ahly SC");// title of the application
 			// set global css sheet 
 			String CSS = this.getClass().getResource("application.css").toExternalForm();
@@ -26,9 +29,14 @@ public class Main extends Application {
 			primaryStage.getIcons().add(icon);
 			
 			
+			ImageView home_Logo = new ImageView();
+			home_Logo.setOnMouseClicked(e ->primaryStage.setScene(homeScreen));
 			primaryStage.setScene(homeScreen);
 			primaryStage.show();
-		} catch(Exception e) {
+		}
+		
+		
+		catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
