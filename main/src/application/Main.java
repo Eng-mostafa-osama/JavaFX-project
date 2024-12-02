@@ -34,7 +34,7 @@ public class Main extends Application {
 			primaryStage.setScene(homeScreen);
 			primaryStage.show();
 		}
-		
+		//hours of pain += 6;
 		
 		catch(Exception e) {
 			e.printStackTrace();
