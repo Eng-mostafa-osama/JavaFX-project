@@ -15,12 +15,12 @@
                <children>
                   <ImageView id="home_Logo" fitHeight="100.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@ahly%20logo.png" />
+                        <Image url="@application/Images/ahly%20logo.png" />
                      </image>
                   </ImageView>
                   <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: CRIMSON;" text="News" translateY="72.0" />
                   <Button layoutX="137.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: CRIMSON;" text="Videos" translateY="72.0" />
-                  <Button fx:id="SignLog" mnemonicParsing="false" onAction="#SwitchToSignLog" style="-fx-background-color: CRIMSON;" text="Sign up / Login" translateX="425.0" translateY="72.0" />
+                  <Button fx:id="SignLog" mnemonicParsing="false" onMouseClicked="#SwitchToSignLog" style="-fx-background-color: CRIMSON;" text="Sign up / Login" translateX="425.0" translateY="72.0" />
                </children>
             </HBox>
          </children></AnchorPane>
